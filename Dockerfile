@@ -1,4 +1,4 @@
-FROM jhpyle/docassemble-os
+FROM blancopedro/docassemble-os-pi
 COPY . /tmp/docassemble/
 RUN DEBIAN_FRONTEND=noninteractive TERM=xterm \
 bash -c \
@@ -153,3 +153,4 @@ REDIS="" \
 RABBITMQ=""
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+
